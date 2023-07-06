@@ -7,6 +7,7 @@ import kreaturen.model.Stable;
 public class AppKreaturen {
 
 	public static void main(String[] args) {
+		// Hallo, das ist eine Zeile die du erst laden musst!
 		// 4 f)
 		Stable s = new Stable(4);
 		
