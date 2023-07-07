@@ -12,6 +12,10 @@ public class Rennschnecke {
 	private static Integer objCount = 0;
 	private Integer id;
 	
+	public Integer getId() {
+		return id;
+	}
+
 	public Rennschnecke(String name, String rasse, Integer MaxG) {
 		this.name = name;
 		this.rasse = rasse;
@@ -49,6 +53,15 @@ public class Rennschnecke {
 	@Override
 	public String toString() {
 		return "Rennschnecke [name=" + name + ", rasse=" + rasse + ", maxG=" + maxG + ", distanz=" + distanz + "]";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(this.id == ((Rennschnecke)obj).getId()) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	

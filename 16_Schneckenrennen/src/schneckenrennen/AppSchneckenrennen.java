@@ -15,11 +15,12 @@ public class AppSchneckenrennen {
 		race1.addRennschnecke(racer2);
 		race1.addRennschnecke(racer3);
 		System.out.println(race1.getTeilnehmer());
-
-		
-		race1.durchfuehren();
+		race1.removeRennschnecke(new Rennschnecke("Max", "Weinberg", 25));
 		System.out.println(race1.getTeilnehmer());
-		System.out.println(race1.ermittleGewinner());
+		
+//		race1.durchfuehren();
+//		System.out.println(race1.getTeilnehmer());
+//		System.out.println(race1.ermittleGewinner());
 	}
 
 }

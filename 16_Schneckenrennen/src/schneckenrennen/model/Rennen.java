@@ -47,6 +47,10 @@ public class Rennen {
 		}		
 	}
 	
+	public void removeRennschnecke(Rennschnecke schnecke) {
+		this.teilnehmer.remove(schnecke);
+	}
+	
 	public Rennschnecke ermittleGewinner() {
 		for (Rennschnecke rennschnecke : teilnehmer) {
 			if(rennschnecke.getDistanz() >= this.renndistanz) {
