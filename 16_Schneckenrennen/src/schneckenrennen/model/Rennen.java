@@ -1,6 +1,7 @@
 package schneckenrennen.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Rennen {
 	private String name;
@@ -33,16 +34,17 @@ public class Rennen {
 	}
 
 	public void addRennschnecke(Rennschnecke neueSchnecke) {
-		this.addRennschnecke(neueSchnecke);
+		this.teilnehmer.add(neueSchnecke);
 		this.anzahlSchnecken++;
 	}
 	
 	public void removeRennschnecke(String name) {
-		for (Rennschnecke rennschnecke : teilnehmer) {
-			if(rennschnecke.getName() == name) {
-				teilnehmer.remove(rennschnecke);
+		for (Rennschnecke rennschnecke : new ArrayList<Rennschnecke>(teilnehmer)) {
+			if(rennschnecke.getName().equals(name)) {
+				teilnehmer.remove(teilnehmer.indexOf(rennschnecke));
+				anzahlSchnecken--;
 			}
-		}
+		}		
 	}
 	
 	public Rennschnecke ermittleGewinner() {

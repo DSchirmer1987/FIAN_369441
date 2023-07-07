@@ -1,18 +1,24 @@
 package schneckenrennen.model;
 
+import java.math.BigInteger;
 import java.util.Random;
+import java.util.UUID;
 
 public class Rennschnecke {
 	private String name;
 	private String rasse;
 	private Integer maxG;
 	private Integer distanz;
+	private static Integer objCount = 0;
+	private Integer id;
 	
 	public Rennschnecke(String name, String rasse, Integer MaxG) {
 		this.name = name;
 		this.rasse = rasse;
 		this.maxG = MaxG;
 		this.distanz = 0;
+		this.id = objCount;
+		objCount++;
 	}
 	
 	public String getName() {
