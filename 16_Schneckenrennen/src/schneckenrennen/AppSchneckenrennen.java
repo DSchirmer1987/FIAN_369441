@@ -2,6 +2,7 @@ package schneckenrennen;
 
 import schneckenrennen.model.Rennen;
 import schneckenrennen.model.Rennschnecke;
+import schneckenrennen.model.Wettbuero;
 
 public class AppSchneckenrennen {
 
@@ -14,13 +15,10 @@ public class AppSchneckenrennen {
 		race1.addRennschnecke(racer1);
 		race1.addRennschnecke(racer2);
 		race1.addRennschnecke(racer3);
-		System.out.println(race1.getTeilnehmer());
-		race1.removeRennschnecke(new Rennschnecke("Max", "Weinberg", 25));
-		System.out.println(race1.getTeilnehmer());
-		
-//		race1.durchfuehren();
-//		System.out.println(race1.getTeilnehmer());
-//		System.out.println(race1.ermittleGewinner());
+
+		Wettbuero wb = new Wettbuero(race1);
+		wb.wetteAnnehmen("Max", 100, "Daniel");
+		wb.rennenDurchfuehren();
 	}
 
 }
