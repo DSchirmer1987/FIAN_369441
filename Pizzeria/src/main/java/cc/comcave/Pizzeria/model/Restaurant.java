@@ -3,6 +3,9 @@ package cc.comcave.Pizzeria.model;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import lombok.NonNull;
+import lombok.var;
+
 public class Restaurant {
 	private String name;
 	private String ort;
@@ -45,8 +48,9 @@ public class Restaurant {
 		return kueche;
 	}
 	
-	public void kochEinstellen(Koch koch) {
+	public void kochEinstellen(@NonNull Koch koch) {
 		this.koeche.add(koch);
+		System.out.println(koch.getNachname());
 	}
 	
 //	public void kochEinstellen(Koch[] koeche) {
@@ -62,7 +66,10 @@ public class Restaurant {
 	}
 	
 	public void kochEinstellen(String message, Koch...koeche) {
-		
+		var counter = 0;
+		counter++;
+		System.out.println(counter);
+		this.kochEinstellen(koeche);
 	}
 	
 	public void kochEinstellen(Object...objects) {
@@ -74,5 +81,12 @@ public class Restaurant {
 			}
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "Restaurant [name=" + name + ", ort=" + ort + ", kueche=" + kueche + ", koeche=" + koeche + "]";
+	}
+	
+	
 	
 }
