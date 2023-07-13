@@ -7,6 +7,15 @@ public class Numberlist implements Iterable<Number>{
 	private Integer size;
 	private Number[] elements;
 	private String name;
+	private Double price;
+
+	public Double getPrice(){
+		return this.price;
+	}
+
+	public void setPrice(Double price){
+		this.price = price;
+	}
 	
 	public String getName() {
 		return name;
