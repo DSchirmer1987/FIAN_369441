@@ -6,7 +6,16 @@ import java.util.Iterator;
 public class Numberlist implements Iterable<Number>{
 	private Integer size;
 	private Number[] elements;
+	private String name;
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public Numberlist() {
 		this.size = 0;
 		this.elements = new Number[this.size];
