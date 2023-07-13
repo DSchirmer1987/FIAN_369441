@@ -6,6 +6,15 @@ import java.util.Iterator;
 public class Numberlist implements Iterable<Number>{
 	private Integer size;
 	private Number[] elements;
+	private Double price;
+
+	public Double getPrice(){
+		return this.price;
+	}
+
+	public void setPrice(Double price){
+		this.price = price;
+	}
 	
 	public Numberlist() {
 		this.size = 0;
